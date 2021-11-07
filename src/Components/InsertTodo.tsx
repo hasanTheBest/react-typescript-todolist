@@ -23,14 +23,20 @@ const StyledTodoForm = styled.div`
     background-color: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
 
+    @media (max-width: 767.98px) {
+      flex-basis: 90%;
+    }
+
     & > .form-group {
       background-color: darkslategray;
       display: flex;
       flex-flow: column nowrap;
       padding: 1rem;
-      margin-bottom: 1rem;
       border-radius: 0.5rem;
       font-weight: 600;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
 
       & > label {
         color: darkgreen;
@@ -59,6 +65,11 @@ const StyledTodoForm = styled.div`
           background-color: darkgreen;
           color: rgba(255, 255, 255, 0.5);
           cursor: pointer;
+
+          &:disabled {
+            cursor: not-allowed;
+            background-color: rgba(255, 255, 255, 0.2);
+          }
         }
       }
     }

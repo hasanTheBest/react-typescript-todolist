@@ -28,9 +28,13 @@ const StyledTodoItem = styled.div`
   overflow: hidden;
   transition: all 0.4s ease;
 
-  & > .title {
-    margin: 0;
-    padding: 0;
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap;
+    padding: 1rem;
+    column-gap: 0.5rem;
+    & > .title {
+      flex-basis: 85%;
+    }
   }
 
   & > .btn {
@@ -38,12 +42,17 @@ const StyledTodoItem = styled.div`
     width: var(--dimension);
     height: var(--dimension);
     flex-basis: var(--dimension);
+    font-size: calc(var(--dimension) * 0.2rem);
     position: relative;
     border: none;
     background-color: rgba(255, 255, 255, 0.2);
     font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
+
+    @media (max-width: 767.98px) {
+      --dimension: 2rem;
+    }
   }
   & > .btn.remove {
     border-radius: 20%;
@@ -69,6 +78,9 @@ const StyledTodoItem = styled.div`
       overflow: hidden;
       font-size: 1.2rem;
       background-color: rgba(255, 255, 255, 0.3);
+      @media (max-width: 767.98px) {
+        font-size: 0.8rem;
+      }
 
       &.active {
         background-color: darkcyan;
@@ -96,7 +108,9 @@ const StyledTodoItem = styled.div`
   }
 
   & > .time {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: darkcyan;
+    /* background-color: rgba(255, 255, 255, 0.2); */
     border-radius: 0.2rem;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;

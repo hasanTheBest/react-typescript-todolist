@@ -5,12 +5,34 @@ import InsertTodo from "./Components/InsertTodo";
 import { Todo } from "./Components/TodoItem";
 
 const StyledAppWrapper = styled.div`
-  max-width: 80%;
+  width: 90%;
+  max-width: 992px;
   margin: 0 auto;
 `;
-const StyledAppTitle = styled.h2`
+const StyledAppTitle = styled.div`
   text-align: center;
-  padding: 2rem;
+  padding: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+
+  & > h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    background: linear-gradient(45deg, darkslateblue, darkcyan, darkslateblue);
+    background-clip: text;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: teal;
+    letter-spacing: 1px;
+  }
 `;
 function App() {
   const [todos, setTodos] = useState<Todo[] | []>([
@@ -89,9 +111,20 @@ function App() {
     );
   };
 
+  let today = new Date();
+  let formattedDate = today.toLocaleDateString(undefined, {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+  });
+
   return (
     <StyledAppWrapper>
-      <StyledAppTitle> My Todo </StyledAppTitle>
+      <StyledAppTitle>
+        <h1>My Todo</h1>
+        <p>{formattedDate}</p>
+      </StyledAppTitle>
       <DisplayTodo
         todos={todos}
         remove={handleRemove}

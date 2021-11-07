@@ -12,7 +12,11 @@ interface TodosProps {
 const StyledDisplayTodo = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  row-gap: 0.8rem;
+  row-gap: 1.2rem;
+
+  @media (max-width: 767.98px) {
+    row-gap: 0.7rem;
+  }
 `;
 
 export const DisplayTodo: React.FC<TodosProps> = (props) => {

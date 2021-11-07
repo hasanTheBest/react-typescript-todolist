@@ -5,10 +5,14 @@ import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
 
 const GlobalStyle = createGlobalStyle`
-  body{
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+}
+  body{
+    font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   }
 `;

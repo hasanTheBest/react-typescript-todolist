@@ -2,6 +2,14 @@
 
 I have built it as the first project of learning `react` with `typescript` as well as `styled-components`.
 
+**Live** (https://rts-todo.netlify.app/)[https://rts-todo.netlify.app/]
+
+### UI at a glance
+
+---
+
+![alt text]("Logo Title Text 1")
+
 ### Features
 
 ---

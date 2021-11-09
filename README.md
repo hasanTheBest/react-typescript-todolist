@@ -1,7 +1,5 @@
 # Rect-Typescript-Styled-TodoList
 
----
-
 I have built it as the first project of learning `react` with `typescript` as well as `styled-components`.
 
 ### Features
@@ -11,7 +9,7 @@ I have built it as the first project of learning `react` with `typescript` as we
 - Add Item
 - Remove Item
 - Update Item
-- Add tag/tags
+- Add tag/tags (optional)
 - Timestamp to add item
 - Responsiveness
 
